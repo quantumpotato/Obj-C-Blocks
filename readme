@@ -12,3 +12,5 @@ You can set executionParams on a QPBlockKeeper and then run its paramBlock with 
 You can also pass in your own parameters with
 NSDictionary *d = [NSDictionary dictionary];
 [bk executeWithParameters:params];
+
+A Kiwi test file is included.
