@@ -1,0 +1,14 @@
+QPBlockKeepers can be assigned a block and a dictionary of parameters then have that block run with their parameters or a new dictionary of parameters.
+
+The parameterizedBlock is the paramBlock property.
+It is a typedef void (^BlockKeeperBlock)(NSDictionary *d);
+
+The block keeper has an executionParams property which is a dictionary to be used with the parameterizedBlock.
+
+You can set executionParams on a QPBlockKeeper and then run its paramBlock with the executionParams by calling 
+
+[bk executeWithDefaultParams];
+
+You can also pass in your own parameters with
+NSDictionary *d = [NSDictionary dictionary];
+[bk executeWithParameters:params];
